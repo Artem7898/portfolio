@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/styles.css') }}">
+    <script src="{{ url_for('static', path='/js/form.js') }}" defer></script>
+    <title>Contact</title>
+</head>
+<body>
+<header>
+    <a>
+        <img src="{{ url_for('static', path='/images/logo9.png') }}" alt="Logo" class="logo">
+        <img src="{{ url_for('static', path='/images/logo10.png') }}" alt="Logo" class="logo">
+    </a>
+</header>
+<nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+</nav>
+<div class="row justify-content-center">
+    <h1>Get in Touch Me </h1>
+</div>
+<main>
+    <form id="emailForm">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Write your comments</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+    </form>
+
+    <p id="responseMessage"></p>
+</main>
+<footer>
+    <p>&copy; 2023 Artem Alimpiev</p>
+</footer>
+</body>
+</html>
