@@ -1,0 +1,19 @@
+{
+  "name": "artem-alimpiev-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tailwindcss -i ./src/styles.css -o ./dist/assets/styles.css --minify && python3 scripts/set_site_url.py",
+    "check": "node --check dist/assets/i18n.js && node --check dist/assets/app.js && node --check dist/assets/layout.js && python3 scripts/check_site.py",
+    "test": "node --test tests/interactions.test.cjs"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "4.1.18",
+    "tailwindcss": "4.1.18",
+    "jsdom": "26.1.0"
+  },
+  "engines": {
+    "node": ">=24 <25"
+  }
+}
